@@ -103,16 +103,15 @@ window.addEventListener('DOMContentLoaded', function(){
         };
         });
         closeBtn.addEventListener('click',()=>{ 
-            closeMenu();
             if (screen.width < 768){
                 menu.style.transform = 'translate(-100%)';
-            }
+            } else{closeMenu();}
         });
         menuItems.forEach(elem =>elem.addEventListener('click', ()=>{ 
-            closeMenu();
+           
             if (screen.width < 768){
                 menu.style.transform = 'translate(-100%)';
-            }
+            }else{closeMenu();}
         }));
     };
     toggleMenu();
